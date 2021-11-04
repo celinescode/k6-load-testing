@@ -1,0 +1,43 @@
+{
+  "name": "k6-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shavo007/k6-demo.git",
+  "author": "Shane Lee",
+  "license": "MIT",
+  "scripts": {
+    "html": "ts-node html_report.ts",
+    "bundle": "webpack",
+    "format": "prettier --write .",
+    "**/*": "prettier --write --ignore-unknown",
+    "prepare": "husky install",
+    "check": "prettier --check ."
+  },
+  "dependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "7.15.6",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-typescript": "7.15.0",
+    "@types/k6": "0.34.3",
+    "@types/lodash": "4.14.172",
+    "babel-loader": "8.2.3",
+    "lodash": "4.17.21",
+    "typescript": "4.4.4",
+    "webpack": "5.60.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.14.5",
+    "clean-webpack-plugin": "4.0.0",
+    "husky": "7.0.4",
+    "k6-html-reporter": "1.0.5",
+    "lint-staged": "11.2.6",
+    "prettier": "2.4.1",
+    "ts-node": "10.4.0",
+    "webpack-bundle-analyzer": "4.5.0",
+    "webpack-cli": "4.9.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,css,md}": "prettier --write"
+  }
+}
